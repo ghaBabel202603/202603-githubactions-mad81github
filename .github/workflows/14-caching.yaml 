@@ -9,7 +9,7 @@ on:
             type: boolean
 jobs:
     build:
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-latest        
         defaults:
             run:
                 working-directory: react-app
@@ -26,4 +26,6 @@ jobs:
           run: npm run test
         - name: Building
           run: npm run build        
+        
+
 
