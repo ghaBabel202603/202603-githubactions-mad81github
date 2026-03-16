@@ -36,9 +36,13 @@ jobs:
         run: npm ci
 
       - name: Run Tests
-        run: npm run test
+        run: npm run test -- --coverage
+        
       - name: Building
         run: npm run build
-      - name: Deploying to nonprod
-        run: echo "Deploying to nonprod"
+        
+      - uses: actions/upload-artifact@v5
+        with:
+          name: my-artifact
+          path: react-app/coverage
  
