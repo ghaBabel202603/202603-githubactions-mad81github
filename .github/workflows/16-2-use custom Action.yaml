@@ -1,4 +1,4 @@
-name: 16 - 2 - Reusable Workflows
+name: 16 Custom Action 
 on:
     workflow_dispatch:
 jobs:
