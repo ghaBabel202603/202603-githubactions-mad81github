@@ -28,7 +28,7 @@ jobs:
   dependency-update:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Check for dependency updates
         id: update-deps
         uses: ./.github/actions/js-dependency-update
