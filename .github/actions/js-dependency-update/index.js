@@ -29,7 +29,7 @@ const setupLogger = ({ debug, prefix } = { debug: false, prefix: '' }) => ({
 async function run() {
   const baseBranch = core.getInput('base-branch', { required: true });
   const headBranch = core.getInput('head-branch', { required: true });
- // const ghToken = core.getInput('gh-token', { required: true });
+  const ghToken = core.getInput('gh-token', { required: true });
   const workingDir = core.getInput('working-directory', { required: true });
   const debug = core.getBooleanInput('debug');
   const logger = setupLogger({ debug, prefix: '[js-dependency-update]' });
@@ -37,7 +37,7 @@ async function run() {
   const commonExecOpts = {
     cwd: workingDir,
   };
-  //core.setSecret(ghToken);
+  core.setSecret(ghToken);
 
   logger.debug('Validating inputs base-branch, head-branch, working-directory');
 
