@@ -9,13 +9,13 @@ on:
     inputs:
       base-branch:
         type: string
-        default: main
+        default: test-actionJS
       target-branch:
         type: string
         default: update-dependencies
       working-dir:
         type: string
-        default: 17-custom-actions/react-app
+        default: ./react-app
       debug:
         type: boolean
         default: false
