@@ -29,7 +29,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Check for dependency updates
+        with:
+          ref: ${{ inputs.base-branch }}
+      - name: Check for dependency updates      
         id: update-deps
         uses: ./.github/actions/js-dependency-update
         with:
