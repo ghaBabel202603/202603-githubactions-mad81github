@@ -31,7 +31,7 @@ jobs:
             base-branch: ${{ inputs.base-branch }}
             head-branch: ${{ inputs.target-branch }}
             working-directory: ${{ inputs.working-directory }}
-            gh-token: ${{ secrets.GH_TOKEN }}
+            gh-token: ${{ secrets.GITHUB_TOKEN }}
             debug: ${{ inputs.debug }}
      
 #secrets.GH_TOKEN
