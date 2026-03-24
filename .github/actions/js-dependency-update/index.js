@@ -31,7 +31,7 @@ async function run() {
   const headBranch = core.getInput('head-branch', { required: true });
   const ghToken = core.getInput('gh-token', { required: true });
   const workingDir = core.getInput('working-directory', { required: true });
-  const debug = false;;
+  const debug = false;
   const logger = setupLogger({ debug, prefix: '[js-dependency-update]' });
 
   const commonExecOpts = {
