@@ -5,6 +5,9 @@ inputs:
         description: 'Your name'
         required: true
         default: 'World'
+outputs:
+    time:
+       description: 'The current time'       
 runs:
     using: docker
     image: Dockerfile
