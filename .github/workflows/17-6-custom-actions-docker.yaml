@@ -16,3 +16,10 @@ jobs:
         with:
           name: ${{ inputs.name }}
 
+  Get-the-time:
+    runs-on: ubuntu-latest
+    needs: hello-to-you-docker
+    steps:
+      - name: Get the time from the Docker action
+        run: | 
+         echo "The time is: ${{ needs.hello-to-you-docker.outputs.time }}"
