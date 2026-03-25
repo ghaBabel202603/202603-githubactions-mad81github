@@ -26,5 +26,5 @@ jobs:
     needs: hello-to-you-docker
     steps:        
       - name: Get the time
-        run: echo "The time is ${{needs.hello-to-you-docker.outputs.time}}"  }}"    
+        run: echo "The time is ${{needs.hello-to-you-docker.outputs.time}}"    
 
